@@ -1,0 +1,108 @@
+  #op {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 1000;
+    background-color: #fff;
+  }
+  #op .opBg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  #op .opBg01 { background-color: #def2fa; transition-delay: 0.5s; z-index: 10;}
+  #op .opBg02 { background-color: #c0dfe0; transition-delay: 0.6s; z-index: 9;}
+  #op .opBg03 { background-color: #abd8dd; transition-delay: 0.7s; z-index: 8;}
+  #op .opBg04 { background-color: #91d0dc; transition-delay: 0.8s; z-index: 7;}
+  #op .opBg05 { background-color: #789f8a; transition-delay: 0.9s; z-index: 6;}
+  #op .opBg06 { background-color: #17595f; transition-delay: 1.0s; z-index: 5;}
+  #op .opBg07 { background-color: #0a373a; transition-delay: 1.1s; z-index: 4;}
+  #op .opBg08 { background-color: #802704; transition-delay: 1.2s; z-index: 3;}
+  #op .opBg09 { background-color: #e06a4e; transition-delay: 1.3s; z-index: 2;}
+  #op .opBg10 { background-color: #deb853; transition-delay: 1.4s; z-index: 1;}
+
+  #op .opBg01.on { top: 0; height: 4.1%;}
+  #op .opBg02.on { top: 4%; height: 5.1%;}
+  #op .opBg03.on { top: 9%; height: 6.1%;}
+  #op .opBg04.on { top: 15%; height: 7.1%;}
+  #op .opBg05.on { top: 22%; height: 8.1%;}
+  #op .opBg06.on { top: 30%; height: 10.1%;}
+  #op .opBg07.on { top: 40%; height: 12.1%;}
+  #op .opBg08.on { top: 52%; height: 14.1%;}
+  #op .opBg09.on { top: 66%; height: 16.1%;}
+  #op .opBg10.on { top: 82%; height: 18.1%;}
+
+  #op .opBg.out { top: 100%; height: 0; transition-delay: 0.7s;}
+  #op .opBg01.out { top: 0; height: 5.1%;}
+  #op .opBg02.out { top: 5%; height: 10.1%;}
+  #op .opBg03.out { top: 15%; height: 70.1%;}
+  #op .opBg04.out { top: 85%; height: 10.1%;}
+  #op .opBg05.out { top: 95%; height: 5.1%;}
+  #titleOp {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 46vh;
+    z-index: 10;
+    opacity: 0;
+    animation: titleOp 1s ease-out 1.5s forwards;
+  }
+
+  #titleOp {
+    width: 100%;
+    text-align: center;
+  }
+
+  #titleOp .title {
+    font-family: Arial, sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+  }
+  #titleOp .titile-sub {
+    font-size: 28px
+  }
+
+  .fadeout {
+    animation : fadeOut 1s;
+    animation-fill-mode: both;
+  }
+
+  .title {
+    color: white;
+    font-weight: 800;
+    font-size: 4rem;
+    font-family: 'Nunito Sans', sans-serif;
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px rgb(0, 0, 3);
+  }
+
+  @keyframes titleOp {
+    0% { opacity: 0;}
+    50% { opacity: 0;}
+    90% { opacity: 1;}
+    100% { opacity: 1}
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @media screen and (max-width:767px) {
+    #titleOp {
+      width: 65vw;
+    }
+    #titleOp .title {
+      font-size: 40px;
+    }
+  }
